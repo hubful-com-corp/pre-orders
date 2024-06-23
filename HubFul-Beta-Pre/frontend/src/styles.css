@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    color: #ffab40;
+}
+
+section {
+    padding: 20px;
+}
+
+#overview p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.account-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.account-box h3 {
+    color: #ffab40;
+}
+
+button {
+    background-color: #ffab40;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff6f00;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+}
+
+#countdown-timer {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}

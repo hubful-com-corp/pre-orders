@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubFul - Beta Pre-Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+
+<body>
+    <header>
+        <h1>Welcome to HubFul.com</h1>
+        <p>The leading Social Commerce Platform-as-a-Service website</p>
+    </header>
+    <section id="overview">
+        <h2>Overview of HubFul.com</h2>
+        <p>Empowering businesses to thrive in the dynamic world of social commerce...</p>
+    </section>
+    <section id="account-types">
+        <h2>Choose Your Account Type</h2>
+        <div class="account-box">
+            <h3>HubFul Hub</h3>
+            <p>For Regular Users</p>
+            <button onclick="showPricing('hubful-hub')">Lifetime Pricing</button>
+            <button onclick="showPricing('hubful-hub')">One Year Discount Pricing</button>
+        </div>
+        <div class="account-box">
+            <h3>HubFul BizHub</h3>
+            <p>For Business Users/Owners</p>
+            <button onclick="showPricing('hubful-bizhub')">Lifetime Special Limited Pricing</button>
+        </div>
+    </section>
+    <section id="registration">
+        <h2>Sign Up for Beta Access</h2>
+        <form id="signup-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <select name="account-type" required>
+                <option value="hubful-hub">HubFul Hub</option>
+                <option value="hubful-bizhub">HubFul BizHub</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+    <section id="countdown">
+        <h2>Pre-Order Countdown</h2>
+        <div id="countdown-timer"></div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
