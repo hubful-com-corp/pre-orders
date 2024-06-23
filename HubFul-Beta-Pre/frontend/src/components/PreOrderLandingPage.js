@@ -54,6 +54,7 @@ const PreOrderLandingPage = () => {
             <section id="overview">
                 <h2>Overview of HubFul.com</h2>
                 <p>Empowering businesses to thrive in the dynamic world of social commerce...</p>
+                <p>HubFul.com offers tools and features to help you grow your business, connect with customers, and manage your operations effectively.</p>
             </section>
             <section id="account-types">
                 <h2>Choose Your Account Type</h2>
@@ -98,6 +99,38 @@ const PreOrderLandingPage = () => {
             <section id="countdown">
                 <h2>Pre-Order Countdown</h2>
                 <div id="countdown-timer">{countdown}</div>
+            </section>
+            <section id="pricing">
+                <h2>Pricing Plans</h2>
+                <div className="pricing-box">
+                    <h3>Lifetime Pricing</h3>
+                    <p>Get access to HubFul Hub for a one-time fee.</p>
+                    <p><strong>$199.99</strong></p>
+                </div>
+                <div className="pricing-box">
+                    <h3>One Year Discount Pricing</h3>
+                    <p>Enjoy HubFul Hub at a discounted price for one year.</p>
+                    <p><strong>$19.99</strong> per year</p>
+                </div>
+                <div className="pricing-box">
+                    <h3>Lifetime Special Limited Pricing</h3>
+                    <p>Exclusive offer for business users with HubFul BizHub.</p>
+                    <p><strong>$299.99</strong></p>
+                </div>
+            </section>
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Comprehensive business management tools</li>
+                    <li>Advanced customer relationship management</li>
+                    <li>Seamless social media integration</li>
+                    <li>Robust analytics and reporting</li>
+                    <li>Customizable user experience</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out to us at <a href="mailto:support@hubful.com">support@hubful.com</a>.</p>
             </section>
         </div>
     );

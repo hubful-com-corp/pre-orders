@@ -11,4 +11,13 @@ const createUser = async (username, email, accountType) => {
     return data;
 };
 
-module.exports = { createUser };
+const getAllUsers = async () => {
+    const { data, error } = await supabase
+        .from('users')
+        .select('*');
+
+    if (error) throw error;
+    return data;
+};
+
+module.exports = { createUser, getAllUsers };

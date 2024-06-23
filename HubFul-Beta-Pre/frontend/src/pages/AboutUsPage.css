@@ -1,0 +1,25 @@
+.about-us {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.about-us-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us-header h1 {
+    color: #ffd700;
+}
+
+.about-us-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-us-content p {
+    margin-bottom: 15px;
+}

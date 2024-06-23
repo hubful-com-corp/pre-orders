@@ -1,4 +1,4 @@
-const { createUser } = require('../models/User');
+const { createUser, getAllUsers } = require('../models/User');
 
 const registerUser = async (req, res) => {
     const { username, email, accountType } = req.body;
@@ -11,4 +11,13 @@ const registerUser = async (req, res) => {
     }
 };
 
-module.exports = { registerUser };
+const getPreOrders = async (req, res) => {
+    try {
+        const users = await getAllUsers();
+        res.status(200).json(users);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+module.exports = { registerUser, getPreOrders };
