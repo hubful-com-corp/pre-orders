@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.page {
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: #ffcc00;
+}

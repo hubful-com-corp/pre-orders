@@ -1,20 +1,33 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
-const dotenv = require('dotenv');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const { createClient } = require('@supabase/supabase-js');
-
-dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+// API endpoint for creating a payment intent
+app.post('/payments/create-payment-intent', async (req, res) => {
+    const { amount, currency } = req.body;
+    try {
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount,
+            currency,
+        });
+        res.status(200).send({
+            clientSecret: paymentIntent.client_secret,
+        });
+    } catch (error) {
+        res.status(500).send({
+            error: error.message,
+        });
+    }
+});
 
-// Routes
-app.use('/api/users', require('./routes/users'));
-app.use('/api/payments', require('./routes/payments'));
+// Additional endpoints for registration, admin operations, etc.
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
